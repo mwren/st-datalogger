@@ -91,7 +91,7 @@ def eventHandler(evt) {
 
 private sendMessage(evt) {
   def headers = [:]
-    headers.put("HOST", "$destination:$port")
+    headers.put("HOST", "$host:$port")
     headers.put("Content-Type", "application/json")
     def body = [event: [deviceId: evt.deviceId, name: evt.name, isPhysical: evt.isPhysical(), 
       value: evt.value, description: evt.description, date: evt.date, unit: evt.unit, 
